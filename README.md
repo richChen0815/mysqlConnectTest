@@ -18,6 +18,7 @@
  
  
 ## 问题 压缩包+命令行的方式 会有一个问题,会发现中间少了设置初始密码过程。如果没有密码怎么登陆呢？
+
 解决：
     找到mysql-server data 目录下.err文件，可以找到默认随机出来的密码。
     
@@ -39,6 +40,7 @@
 
     
     ![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562575813(1).jpg)
+    ![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562576475(1).jpg)
 
 
 
