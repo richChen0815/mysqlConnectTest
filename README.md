@@ -29,9 +29,9 @@
            5.7.6之前的修改密码的指令为： SET PASSWORD FOR 'root'@'localhost' = PASSWORD('yourPass');
 
 
-![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562575813(1).jpg)
+  ![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562575813(1).jpg)
        
-![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562576475(1).jpg)
+  ![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562576475(1).jpg)
 
 
 
