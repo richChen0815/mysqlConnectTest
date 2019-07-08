@@ -12,7 +12,7 @@
     (1)mysqld --install
     (2)mysqld --initialize 初始化
     (3)net stop mysql  net start mysql
-  ```
+ ```
 
  ![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562574879(1).jpg) 
  
@@ -25,22 +25,13 @@
        (1) mysql -u root -p
        (2) 输入随机分配密码
        (3) 重置密码
-
-         5.7.6以及之后的版本修改密码的命令为：
-
-          ```
-          ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourPass';
-          ```
-
-         5.7.6之前的修改密码的指令为：
-
-         ```
-         SET PASSWORD FOR 'root'@'localhost' = PASSWORD('yourPass');
-         ```
+           5.7.6以及之后的版本修改密码的命令为： ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourPass';
+           5.7.6之前的修改密码的指令为： SET PASSWORD FOR 'root'@'localhost' = PASSWORD('yourPass');
 
 
-       ![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562575813(1).jpg)
-       ![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562576475(1).jpg)
+![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562575813(1).jpg)
+       
+![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562576475(1).jpg)
 
 
 
