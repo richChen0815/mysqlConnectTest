@@ -22,7 +22,7 @@
    解决：
        找到mysql-server data 目录下.err文件，可以找到默认随机出来的密码。
 
-       (1) mysql -u root -p
+       (1) mysql -u root -p -p 指的是密码
        (2) 输入随机分配密码
        (3) 重置密码
            5.7.6以及之后的版本修改密码的命令为： ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourPass';
