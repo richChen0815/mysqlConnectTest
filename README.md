@@ -1,4 +1,9 @@
-### mysql-server 服务端
+
+### [download url](https://dev.mysql.com/downloads/file/?id=485812)
+
+### mysql-server server(select Community)
 
 
-### mysql-workbranch 客户端
+
+
+### mysql-workbrench client(select workbrench)
