@@ -66,6 +66,7 @@
   
 
 ## 条件查询函数
+```
    
    1. count(*) 查询数量      @example  select count(*) from t_class;
    2. min(column) 查最小值   @example  select min(number) from t_class;
@@ -74,8 +75,11 @@
    5. rand() 随机数   rand()*3
    6. now()  当前函数  @example  select now();
    7. concat() 拼接字符串  @example  select concat(id,'用户姓名',name)  @result {}
+```
    
 ## where 子条件查询
+
+```
    1. 大于小于      @example select * from t_class where class_id > 1 and class_id < 5; </br>
    2.between and   @example select * from t_class where class_id between 1 and 5;</br>
    3.全匹配         @example select * from t_class where name ='一班';</br>
@@ -83,3 +87,4 @@
    5.排序 order by  desc(降序)| asc(正序); @example select * from t_student order by birth desc </br>
    6.关联查询       @example select t_student.id,t_class.name from t_student,t_class where t_student.class_id = t_class.class_id </br>
    7.left join on  @example select t_student.id,t_class.name from t_student left join t_class on t_student.class_id = t_class.class_id </br>
+```
