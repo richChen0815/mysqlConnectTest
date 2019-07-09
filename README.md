@@ -80,18 +80,18 @@
 ## where 子条件查询
 
 ```
-   1. 大于小于      @example select * from t_class where class_id > 1 and class_id < 5; </br>
-   2.between and   @example select * from t_class where class_id between 1 and 5;</br>
-   3.全匹配         @example select * from t_class where name ='一班';</br>
-   4.like          @example select * from t_class where name like '%班';   '% 中间%' | '% 班'  |  '一 %'</br>
-   5.排序 order by  desc(降序)| asc(正序); @example select * from t_student order by birth desc </br>
-   6.关联查询       @example select t_student.id,t_class.name from t_student,t_class where t_student.class_id = t_class.class_id </br>
-   7.left join on  @example select t_student.id,t_class.name from t_student left join t_class on t_student.class_id = t_class.class_id </br>
+   1. 大于小于      @example select * from t_class where class_id > 1 and class_id < 5;
+   2.between and   @example select * from t_class where class_id between 1 and 5;
+   3.全匹配         @example select * from t_class where name ='一班';
+   4.like          @example select * from t_class where name like '%班';   '% 中间%' | '% 班'  |  '一 %'
+   5.排序 order by  desc(降序)| asc(正序); @example select * from t_student order by birth desc 
+   6.关联查询       @example select t_student.id,t_class.name from t_student,t_class where t_student.class_id = t_class.class_id 
+   7.left join on  @example select t_student.id,t_class.name from t_student left join t_class on t_student.class_id = t_class.class_id 
 ```
 
 ## 表操作
 
 ```
- 1.增加属性列    alter  table t_class add column name varchar(10); </br>
- 2.修改属性类    update t_class set number = 10 where id = 1;</br>
+ 1.增加属性列    alter  table t_class add column name varchar(10); 
+ 2.修改属性类    update t_class set number = 10 where id = 1;
 ```
