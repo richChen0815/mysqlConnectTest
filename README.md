@@ -36,3 +36,50 @@
 
 
 ### mysql-workbrench client(select workbrench)
+ **workbrench --mysql图形化工具**
+ 1.创建数据库   右击 create new schema.
+ 2.切换active schema 
+   (1)右击 set sa default active schema
+   (2)use db_test;
+   
+**use command**
+   一般生产环境不会安装客户端图形化界面,所以会使用到命令行开发。
+   
+   1.命令行登录mysql server
+      ```
+       mysql -u root -p
+      ```
+   2.显示有多少库
+     show databases;
+     
+
+ 
+   
+   
+  
+ student table 
+   id
+   name
+   sex   M 男性 F 女性  boolearn(2) 
+   class_id  Int 
+   birth   timestamp (1970 到现在的时间戳)  | date  |  dateTime  
+  
+
+## 条件查询函数
+   
+   1. count(*) 查询数量      @example  select count(*) from t_class;
+   2. min(column) 查最小值   @example  select min(number) from t_class;
+   3. sum()  求和
+   4. sqrt() 平方根
+   5. rand() 随机数   rand()*3
+   6. now()  当前函数  @example  select now();
+   7. concat() 拼接字符串  @example  select concat(id,'用户姓名',name)  @result {}
+   
+## where 子条件查询
+   1. 大于小于      @example select * from t_class where class_id > 1 and class_id < 5;
+   2.between and   @example select * from t_class where class_id between 1 and 5;
+   3.全匹配         @example select * from t_class where name ='一班';
+   4.like          @example select * from t_class where name like '%班';   '% 中间%' | '% 班'  |  '一 %'
+   5.order by
+   6.关联查询 
+   7.left join on
