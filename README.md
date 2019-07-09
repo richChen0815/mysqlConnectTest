@@ -88,3 +88,10 @@
    6.关联查询       @example select t_student.id,t_class.name from t_student,t_class where t_student.class_id = t_class.class_id </br>
    7.left join on  @example select t_student.id,t_class.name from t_student left join t_class on t_student.class_id = t_class.class_id </br>
 ```
+
+## 表操作
+
+```
+ 1.增加属性列    alter  table t_class add column name varchar(10); </br>
+ 2.修改属性类    update t_class set number = 10 where id = 1;</br>
+```
