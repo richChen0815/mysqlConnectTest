@@ -94,8 +94,18 @@
 ```
  1.增加属性列    alter  table t_class add column name varchar(10); 
  2.修改属性类    update t_class set number = 10 where id = 1;
+ 3.创建表       create 
 ```
 
+## 数据库操作
+
+ 1. create database db_test;
+ 2. drop database db_test;
+ 3. use db_test;
+
+
+## varchar 和 char 区别
+   比如定义长度为10，实际上只有2个字节长度，那么varchar的长度立马变为2，char 用空格补齐，用的时候需要trim 一下。
 
 ## node 链接 mysql
 
