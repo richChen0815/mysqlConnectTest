@@ -115,14 +115,12 @@
      if(err){} // 语句操作
   });
   
-  5. connection.end(err=>{
+  5.connection.end(err=>{
      if(err) // 关闭连接
   })
   
-  
-  
   6.这里有个问题，要设置数据库可以通过密码的方式链接,不然一直报err
-   alter user 'root'@'localhost' identified with mysql_native_password by '123456';
+    alter user 'root'@'localhost' identified with mysql_native_password by '123456';
   
 
  
