@@ -98,7 +98,9 @@
 
 
 ## node 链接 mysql
- 1.npm install mysql
+
+ 1.npm install mysql;
+ 
  2.const connection = mysql.createConnection(config);
  const config = {
      host:'localhost',
