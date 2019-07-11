@@ -95,3 +95,35 @@
  1.增加属性列    alter  table t_class add column name varchar(10); 
  2.修改属性类    update t_class set number = 10 where id = 1;
 ```
+
+
+## node 链接 mysql
+ 1.npm install mysql
+ 2.const connection = mysql.createConnection(config);
+ const config = {
+     host:'localhost',
+     database:'xx',
+     user:'root',
+     password:'xxxxx'
+  };
+  
+  3.connection.connect((err)=>{
+    if(err) //链接数据库
+  })
+  
+  4.connection.query(sql,params,(err,result,fields)=>{
+     if(err){} // 语句操作
+  });
+  
+  5. connection.end(err=>{
+     if(err) // 关闭连接
+  })
+  
+  
+  
+  6.这里有个问题，要设置数据库可以通过密码的方式链接,不然一直报err
+   alter user 'root'@'localhost' identified with mysql_native_password by '123456';
+  
+
+ 
+
