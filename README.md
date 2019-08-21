@@ -18,11 +18,16 @@
  
  
 ## 问题 压缩包+命令行的方式 会有一个问题,会发现中间少了设置初始密码过程。如果没有密码怎么登陆呢？
+使用-initialize生成随机密码，使用-initialize-insecure生成空密码。默认帐号root,后面的-user=mysql不更改
+
+
+
+https://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization.html
 
    解决：
        找到mysql-server data 目录下.err文件，可以找到默认随机出来的密码。
 
-       (1) mysql -u root -p -p 指的是密码
+       (1) mysql -u root -p -p 指的是密码 （空密码 --skip-password）
        (2) 输入随机分配密码
        (3) 重置密码
            5.7.6以及之后的版本修改密码的命令为： ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourPass';
