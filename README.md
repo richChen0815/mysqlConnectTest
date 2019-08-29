@@ -10,7 +10,7 @@
  
  ```
     (1)mysqld --install
-    (2)mysqld --initialize 初始化
+    (2)mysqld --initialize 初始化 
     (3)net stop mysql  net start mysql
  ```
 
@@ -18,7 +18,7 @@
  
  
 ## 问题 压缩包+命令行的方式 会有一个问题,会发现中间少了设置初始密码过程。如果没有密码怎么登陆呢？
-使用-initialize生成随机密码，使用-initialize-insecure生成空密码。默认帐号root,后面的-user=mysql不更改
+默认帐号root,后面的-user=mysql不更改
 
 
 
@@ -27,8 +27,8 @@ https://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization.html
    解决：
        找到mysql-server data 目录下.err文件，可以找到默认随机出来的密码。
 
-       (1) mysql -u root -p -p 指的是密码 （空密码 --skip-password）
-       (2) 输入随机分配密码
+       (1) mysql -u root -p -p 指的是密码 
+       (2) 输入随机分配密码 （使用-initialize生成随机密码，使用-initialize-insecure生成空密码 空密码 --skip-password）
        (3) 重置密码
            5.7.6以及之后的版本修改密码的命令为： ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourPass';
            5.7.6之前的修改密码的指令为： SET PASSWORD FOR 'root'@'localhost' = PASSWORD('yourPass');
@@ -39,6 +39,11 @@ https://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization.html
   ![图片](https://github.com/richChen0815/mysqlConnectTest/blob/master/1562576475(1).jpg)
 
 
+
+
+## mysql 卸载
+  1.找到my.ini文件配置文件，找到安装目录和data目录，删除文件。
+  2.卸载是用控制面板卸载
 
 ### mysql-workbrench client(select workbrench)
  **workbrench --mysql图形化工具**
@@ -85,11 +90,11 @@ https://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization.html
 ## where 子条件查询
 
 ```
-   1. 大于小于      @example select * from t_class where class_id > 1 and class_id < 5;
+   1. 大于小于      @example select * from t_class where class_id > 1 and class_id < 5; <> 不等于 
    2.between and   @example select * from t_class where class_id between 1 and 5;
    3.全匹配         @example select * from t_class where name ='一班';
    4.like          @example select * from t_class where name like '%班';   '% 中间%' | '% 班'  |  '一 %'
-   5.排序 order by  desc(降序)| asc(正序); @example select * from t_student order by birth desc 
+   5.排序 order by  desc(降序)| asc(正序); @example select * from t_student where 条件 order by birth desc 
    6.关联查询       @example select t_student.id,t_class.name from t_student,t_class where t_student.class_id = t_class.class_id 
    7.left join on  @example select t_student.id,t_class.name from t_student left join t_class on t_student.class_id = t_class.class_id 
 ```
